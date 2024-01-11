@@ -40,26 +40,43 @@
     </header>
 
     <!-- HERO / BANNER -->
-    <section class="container container-fluid col-xl-6 md-4 sm-9">
-
-    <div class="mb-1" id="formulario">
-      <label for="exampleFormControlInput1" class="form-label link-light fs-4">Nombre</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombres">
-    </div>
-
-    <div class="mb-1" id="formulario">
-        <label for="exampleFormControlInput1" class="form-label link-light fs-4">Apellido</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellidos">
-    </div>
-
     
-    <div class="mb-1">
-      <label for="exampleFormControlTextarea1" class="form-label link-light fs-4">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-warning mb-3 fs-4 d-inline-block w-100">CONTACTAME</button>
-    </div>
+    <section class="hero d-flex flex-column justify-content-center aling-items-center">
+        <div class="container">
+            <div>
+                <div class="col-lg-10 col-md-8 col-sm-9 text-center descirpcionHero">
+                    <h2>Dejame tu consulta</h2>
+                </div>
+            </div>
+        </div>
+
+        <form class="formulario">
+            <div class="col-xl-10 col-md-10 col-sm-10 datosContacto">
+                <label>
+                    <h3>Nombres</h3>
+                </label>
+                <input type="text" id="Nombres">
+            </div>
+
+            <div class="col-xl-10 col-md-10 col-sm-10 datosContacto">
+                <label class="datosContacto">
+                    <h3>Apellidos</h3>
+                </label>
+                <input type="text" id="Apellidos">
+            </div>
+
+
+            <div class="col-xl-10 col-md-10 col-sm-10 datosContacto">
+                <label class="datosContacto">
+                    <h3>Mensaje</h3>
+                </label>
+                <textarea cols="60%" rows="10" placeholder="Dejame aqui tu mensaje"></textarea>
+            </div>
+
+            <input class="btnFormulario" type="reset">
+            <input class="btnFormulario" type="submit">
+        </form>
+    </section>
 
     <div>
         <a href="https://api.whatsapp.com/send?phone=2324589620&text=Hola!,%20pollo%20estoy%20en%20tu%20pagina%20web"
