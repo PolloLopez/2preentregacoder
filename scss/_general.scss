@@ -1,0 +1,9 @@
+/* aplicar esta regla de 3 para que 1rem equivalga 10px */
+html {
+    font-size: 62.5%;
+}
+/* aplicamos a todo el body */
+body{
+    font-family: 'roboto', sans-serif;
+    background-color:$color-fondo;
+}

@@ -1,0 +1,18 @@
+/* GALERIA */
+
+.imagenMuestra {
+    margin-top: 0.1rem;
+    display: block;
+    border-radius: 2rem;
+    padding: 1rem;
+    filter: grayscale(65%);
+
+    &:hover {
+        filter: grayscale(0%);
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+        transition: all 0.1s;
+    }
+}
+
+/* efecto para cuando pasas el cursor por arriba (hover) */

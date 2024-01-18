@@ -1,0 +1,63 @@
+/*TARJETAS DE LA TIENDA */
+
+.contenedorTienda {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 1rem;
+}
+
+.tienda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    background-color: #FAD7A0;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.tiendaImagen {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-radius: 1.5rem;
+    margin-bottom: 5%;
+}
+
+.tiendaTitulo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tiendaDescripcion {
+    font-size: 1.5rem;
+    color: blueviolet;
+    text-align: center;
+}
+
+.tiendaPrecio {
+    font-size: 2rem;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+}
+
+.tiendaBtn {
+    padding: 1rem 2rem;
+    background-color: rgba(209, 26, 48, 0.913);
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    border-radius: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border: 0.2rem solid black;
+
+    &:hover {
+        background-color: rgba(239, 20, 48, 0.913);
+        border: 0.15rem solid black;
+    }
+}

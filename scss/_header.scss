@@ -1,0 +1,66 @@
+/* ENCABEZADO//HEADER */
+
+.encabezado {
+    display: flex;
+    position: sticky;
+    margin-top: 1rem;
+    justify-content: space-between;
+
+    /* distribuye y alinea */
+    align-items: center;
+
+    /* eje vertical */
+    width: 100%;
+    height: 8rem;
+}
+
+.menuNav a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-left: 1px solid $color-botones-sec;
+    border-right: 1px solid $color-botones-sec;
+    padding: 0;
+}
+
+.tituloPrincipal {
+    text-decoration: none;
+    color: $color-fuentes-sec;
+}
+
+.imgLogo {
+    height: 8rem;
+}
+
+.tituloPrincipal h1 {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+    /*sacar viñetas */
+}
+
+li {
+    margin-right: 1.5rem;
+
+    a {
+        text-decoration: none;
+        color: $color-fuentes;
+        background-color: $color-fuentes-sec;
+        padding: 1px 5px;
+        border: 1px solid$color-botones;
+        border-radius: 7px;
+        font-size: 2rem;
+        margin: none;
+
+        &:hover {
+            font-weight: 600;
+            border: 2px solid $color-botones-sec;
+            border-radius: 4px;
+        }
+    }
+}

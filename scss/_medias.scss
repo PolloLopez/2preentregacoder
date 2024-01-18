@@ -1,0 +1,56 @@
+/*Medias Queries */
+/* Tablet de 0 a 767px*/
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .contenedorTienda {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorTienda {
+        grid-template-columns: 2fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .encabezado {
+        margin-top: 2rem;
+    }
+
+    .tituloPrincipal h1 {
+        display: none;
+    }
+
+    .imagenMuestra {
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 406px) {
+    .hero {
+        height: calc(100vh - 10rem);
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        margin-top: auto;
+        height: calc(100vh - 0.5rem);
+        position: relative;
+    }
+}
+
+@media (max-width: 406px) {
+    .botoncito {
+        margin-right: 5%;
+        margin-top: 0;
+    }
+
+    .footer {
+        align-items: center;
+    }
+}

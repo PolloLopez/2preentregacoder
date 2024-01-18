@@ -1,0 +1,78 @@
+/*HERO*/
+
+.hero {
+    width: 100%;
+
+    /*  100vh seria todo el alto de la pantalla - Si queres que ocupe el alto de la pantalla menos lo que ocupa el header, tenes que hacer la cuenta con calc  restando el 100vh - 10rem (lo que ocupa el header)*/
+    height: calc(100vh - 8rem);
+    display: inline-block;
+    color: rgb(16, 0, 236);
+    position: relative;
+    margin-top: 2rem;
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 400;
+
+        span {
+            font-weight: 700;
+            padding: 0 5px;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-color: rgba(209, 26, 48, 0.913);
+                position: absolute;
+                height: 12%;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                border-radius: 3px;
+
+                /* para que quede por detras del texto negativo por encima positivo el z-index */
+                z-index: -1;
+            }
+        }
+    }
+
+    p {
+        color: black;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        margin-top: 100vh (-7rem);
+    }
+
+    a {
+        background-color: #FAD7A0;
+        text-decoration: none;
+        color: rgba(209, 26, 48, 0.913);
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1px 5px;
+        border-radius: 8px;
+        border: 1px solid black;
+        margin: none;
+
+        &:hover {
+            font-weight: 600;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+    }
+}
+
+/* pseudoelementos */
+
+/* subrayado del hero */
+
+/* parrafo de descripcion en el hero */
+
+/* boton de contacto a = el link que tiene */
+
+/* color que se pone el boton cuando posicionas el cursor */
+
+.containerHero {
+    display: flex;
+    margin-top: 0;
+}
