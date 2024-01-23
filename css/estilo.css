@@ -5,139 +5,82 @@
 html {
     font-size: 62.5%;
 }
+
 /* aplicamos a todo el body */
-body{
+body {
     font-family: 'roboto', sans-serif;
-    background-color:#fcf8cff8;
+    background-color:#535c68e1;
 }
 
 /* ENCABEZADO//HEADER */
 
 .encabezado {
     display: flex;
-    position: sticky;
-    margin-top: 1rem;
-    justify-content: space-between; /* distribuye y alinea */
-    align-items: center; /* eje vertical */
-    width: 100%;
     height: 8rem;
-}
-.menuNav a {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    border-left: 1px solid #c1101a;
-    border-right: 1px solid #c1101a;
-    padding: 0;
+    padding: 1.0rem 0;
+    justify-content: space-between;
+    /* distribuye y alinea */
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.tituloPrincipal {
-    text-decoration: none;
-    color: rgba(209, 26, 48, 0.913);
+h1 {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #fafafa;/*$color-fuentes*/
 }
 
 .imgLogo {
     height: 8rem;
+    animation: 1s;
 }
 
-.tituloPrincipal h1 {
-    display: inline-block;
-    font-size: 3rem;
-    font-weight: 600;
+@keyframes imgLogo {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 }
 
-ul {
-    display: flex;
-    list-style: none; /*sacar viñetas */
+.imgLogo {
+    height: 8rem;
+    animation: imgLogo 2s;
 }
 
-li {
-    margin-right: 1.5rem;
-}
 
-li a {
-    text-decoration: none;
-    color: rgba(209, 26, 48, 0.913);
-    background-color: #FAD7A0;
-    padding: 1px 5px;
-    border: 1px solid black; 
-    border-radius: 7px;
-    font-size: 2rem; 
-    margin: none;
-}
-
-li a:hover {
-    font-weight: 600;
-    border: 2px solid black;
-    border-radius: 4px;
-}
 
 /*HERO*/
 
 
 .hero {
-    width: 100%;
-    /*  100vh seria todo el alto de la pantalla - Si queres que ocupe el alto de la pantalla menos lo que ocupa el header, tenes que hacer la cuenta con calc  restando el 100vh - 10rem (lo que ocupa el header)*/
-    height: calc( 100vh - 8rem );
     display: inline-block;
-    color: rgb(16, 0, 236);
+    color: #8fb7ec;
+    /*$color-fuentes-tirulos-botones*/
     position: relative;
-    margin-top: 2rem;
+    width: 100%;
 }
-   /* pseudoelementos */
 
-.hero h2 {
+h2 {
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 400;
+    color: #fafafa; /*$color-fuentes*/
+}
+
+p {
+    color: #fafafa; /*$color-fuentes*/
+    font-size: 2rem;
+    margin: 2rem ;
+    font-size: 1.8rem;
 }
 
 .hero h2 span {
-    font-weight: 700;
-    padding: 0 5px;
+    font-weight: 800;
+    padding: 0.5px;
     position: relative;
-}
-
-/* subrayado del hero */
-.hero h2 span::before{
-    content: "";
-    background-color: rgba(209, 26, 48, 0.913);
-    position: absolute;
-    height: 12%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-radius: 3px;
-    /* para que quede por detras del texto negativo por encima positivo el z-index */
-    z-index: -1;
-}
-
-/* parrafo de descripcion en el hero */
-.hero p {
-    color: black;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    margin-top: 100vh - 7rem;
-}
-
-/* boton de contacto a = el link que tiene */
-
-.hero a {
-    background-color: #FAD7A0;
-    text-decoration: none;
-    color: rgba(209, 26, 48, 0.913);
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 1px 5px;
-    border-radius: 8px;
-    border: 1px solid black;
-    margin: none;
-}
-
-/* color que se pone el boton cuando posicionas el cursor */
-.hero a:hover {
-    font-weight: 600;
-    border: 2px solid black;
-    border-radius: 4px;
 }
 
 .containerHero {
@@ -145,71 +88,90 @@ li a:hover {
     margin-top: 0;
 }
 
-    /* GALERIA */
 
-.imagenMuestra {
-    margin-top: 0.1rem;
+
+/* BOTONES */
+
+.boton{
+    text-decoration: none;
+    color: black;
+    /*$color-fuentes-botones*/
+    background-color: #8084eb;/*$color-botones*/
+    padding: 3px;
+    border-radius: 1rem;
+    font-size: 2rem;
+    margin: 0.5rem;
+    border: none;
+}
+
+.boton:hover {
+    border: 1px solid #8084eb;
+    background-color: #999cf5;/*$color-botones-sec*/
+}
+
+/* GALERIA */
+
+.foto {
+    margin-top: 1rem;
     display: block;
-    border-radius: 2rem;
-    padding: 1rem;
-    filter: grayscale(65%);
+    border-radius: 4rem;
+    filter: grayscale(55%);
 }
 
 /* efecto para cuando pasas el cursor por arriba (hover) */
-.imagenMuestra:hover {
+.foto:hover {
     filter: grayscale(0%);
-    padding: 0.5rem;
-    border-radius: 1.5rem;
-    transition: all 0.1s;
+    border-radius: 2rem;
+    transition: all 0.2s;
 }
+
+
+
 
 /* FOOTER */
 footer {
-    color: black;
-    margin: 1.5rem;
     padding: 3rem;
-    border-top: 2px double #CCAF45;
+    border-top: 2px double #999cf5;/*$color-botones-sec*/
     text-align: center;
+    margin-top: 2rem;
 }
 
 h3 {
     text-align: center;
-    color: rgba(209, 26, 48, 0.913);
+    color: #8fb7ec; /*$color-fuentes-titulos*/
     text-transform: uppercase;
     font-size: 2rem;
 }
-
-h4 {
-    color: black;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
 
 footer p {
-    color: rgb(8, 12, 202);
-    font-size: 3rem;
+    color:  #000000; /*$color-fuentes-botones*/
+    font-size: 1.5rem;
     text-transform: uppercase;
 }
 
 .logoRedes {
-    position: center;
-    height: 5rem;
+    color: #8084eb; /*$color-botones*/
+    text-align: center;
+    padding: 2rem;
     cursor: pointer;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+
 }
 
-
-.logoRedes:hover{
-    height: 8.5rem;
-    margin: 0.1rem;
-    transition: all 0.2s;
+.logoRedes:hover {
+    font-size: 5rem;
+    color: #999cf5;/*$color-botones-sec*/
 }
 
+.redesCirco {
+    text-align: center;
+    color: #270ee4; /*$color-fuentes-titulos-color*/
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
 .logoWhatsapp {
-    width: 6rem;
+    width: 5rem;
     position: fixed;
     bottom: 40px;
     right: 1.5rem;
@@ -218,9 +180,7 @@ footer p {
 }
 
 .logoWhatsapp:hover {
-    width: 7.5rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+    width: 6rem;
 }
 
 /*TARJETAS DE LA TIENDA */
@@ -237,20 +197,19 @@ footer p {
     align-items: center;
     padding: 2rem;
     border-radius: 0.7rem;
-    background-color: #FAD7A0;
+    background-color: #535768;/*$color-tarjetas*/
     margin-left: 1rem;
     margin-top: 2rem;
 }
 
 .tiendaImagen {
     width: 100%;
-    height: 200px;
+    height: 50%;
     position: relative;
     border-radius: 1.5rem;
-    margin-bottom: 5%;
 }
 
-.tiendaTitulo {
+.producto {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -258,84 +217,28 @@ footer p {
 
 .tiendaDescripcion {
     font-size: 1.5rem;
-    color: blueviolet;
+    color: #F2F2E7;/*$color-fuentes-tarjetas*/
     text-align: center;
 }
 
 .tiendaPrecio {
     font-size: 2rem;
-    color: black;
-    font-weight: 900;
+    color: #fafafa;/*$color-fuentes*/
+    font-weight: 600;
     text-align: center;
-    
 }
 
-.tiendaBtn {
-    padding: 1rem 2rem;
-    background-color: rgba(209, 26, 48, 0.913);
-    color: black;
-    font-weight: bold;
-    font-size: large;
-    text-align: center;
-    border-radius:1.5rem;
-    margin: 0.5rem;
-    cursor: pointer;
-    border: 0.2rem solid black;
-}
-.tiendaBtn:hover {
-    background-color: rgba(239, 20, 48, 0.913);
-    border: 0.15rem solid black;
-}
 
-/* CONTACTO */
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    justify-content: center;
-    gap: 5px;
-    margin-left: 1rem;
-    margin-top: 3px;
-}
-
-.contactoBtn {
-    color: rgba(209, 26, 48, 0.913);
-    background-color: #FAD7A0;
-    border: 1px solid black; 
-    border-radius: 4px; 
-}
-
-.contactoBtn:hover {
-    color: rgba(209, 26, 48, 0.913);
-    border: 2px solid black;
-    background-color: #FAD7A0;
-    font-weight: 800;
-}
 
 /*Medias Queries */
 /* Tablet de 0 a 767px*/
 
-@media (min-width: 767px) and (max-width: 1024px) {
-    .contenedorTienda {
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-    }
-}
 
 @media (max-width: 767px) {
-    .contenedorTienda {
-        grid-template-columns: 2fr;
+    .encabezado {
+        margin-top: 1rem;
     }
-}
 
-
-
-@media (max-width: 767px) {
-    .encabezado{
-        margin-top: 2rem;
-    }
     .tituloPrincipal h1 {
         display: none;
     }
@@ -347,27 +250,37 @@ footer p {
 }
 
 @media (max-width: 406px) {
-        .hero {
-            height: calc(100vh - 10rem);
-            margin-top: 2rem;
-        }
+    .hero {
+        height: calc(100vh - 10rem);
+        margin-top: 8rem;
     }
+}
 
 @media (max-width: 767px) {
     .hero {
         margin-top: auto;
-        height: calc( 100vh - 0.5rem );
+        height: calc(100vh - 0.5rem);
         position: relative;
     }
 }
-    
+
 @media (max-width: 406px) {
-    .botoncito {
-        margin-right: 5%;
-        margin-top: 0;
-    }
-    
     .footer {
         align-items: center;
+    }
+}
+
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .contenedorTienda {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorTienda {
+        grid-template-columns: 2fr;
     }
 }
